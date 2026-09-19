@@ -1,0 +1,11 @@
+# Archivos de sistema (Windows / macOS)
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Configuración local de editor (VS Code)
+.vscode/
+
+# Notas o borradores locales (opcional si usas archivos temporales de diseño)
+*.tmp
+borradores/
