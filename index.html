@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,18 +10,35 @@
 </head>
 
 <body>
-    <nav>
-        <a class="activa" href="index.html">Inicio</a>
-        <a href="contenido.html">Contenido</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+
+    <header>
+        <h1>Home</h1>
+        <!-- inicio nav -->
+        <nav>
+            <a class="activa" href="index.html">Inicio</a>
+            <a href="contenido.html">Contenido</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <!-- fin nav -->
+    </header>
+    <main>
+        <!-- inicio carrusel -->
+        <section class="carrusel">
+            <button id="btn-anterior" type="button">Anterior</button>
+            <img id="imagen-carrusel" src="img/carrusel/garfield.png" alt="Imagen del carrusel principal">
+            <button id="btn-siguiente" type="button">Siguiente</button>
+        </section>
+        <!-- Fin carrusel -->
+    </main>
+
+    <footer>
+        <p>Footer - Datos del grupo © 2026 Sitio web</p>
+    </footer>
 
 
 
 
 
-
-    
     <script src="js/carrusel.js"></script>
 </body>
 
