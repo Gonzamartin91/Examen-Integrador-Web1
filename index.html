@@ -31,17 +31,57 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <!-- inicio carrusel -->
-        <section class="carrusel">
-            <button id="btn-anterior" type="button">Anterior</button>
-            <img id="imagen-carrusel" src="img/carrusel/garfield.png" alt="Imagen del carrusel principal">
-            <button id="btn-siguiente" type="button">Siguiente</button>
+        <main class="contenido-pagina">
+
+        <section class="hero">
+            <div class="hero-texto">
+                <h1>Formación tecnológica con el respaldo de tu universidad</h1>
+                <p class="eslogan">Cursos, talleres y charlas dictados por la ULP.</p>
+                <p>ULP Tech es la propuesta de extensión de la Universidad de La Punta para quienes
+                    quieren aprender tecnología: estudiantes, docentes y cualquier persona interesada.</p>
+            </div>
+
+            <section class="carrusel" aria-label="Cursos destacados">
+                <div class="carrusel-visor">
+                    <button class="carrusel-boton" id="btn-anterior" type="button" aria-label="Curso anterior">‹</button>
+
+                    <figure class="carrusel-figura">
+                        <span class="carrusel-etiqueta">Destacado</span>
+                        <img id="imagen-carrusel" src="img/carrusel/garfield.png" alt="Garfield comiendo lasaña">
+                        <figcaption>
+                            <h2 id="titulo-carrusel">Desarrollo Web Full Stack</h2>
+                            <p id="descripcion-carrusel">8 semanas · nivel inicial</p>
+                        </figcaption>
+                    </figure>
+
+                    <button class="carrusel-boton" id="btn-siguiente" type="button" aria-label="Curso siguiente">›</button>
+                </div>
+
+                <!-- Los puntos indicadores los crea carrusel.js con createElement() -->
+                <div class="carrusel-indicadores" id="indicadores-carrusel" aria-hidden="true"></div>
+            </section>
         </section>
-        <!-- Fin carrusel -->
+
+        <section class="tarjetas">
+            <article class="tarjeta">
+                <h2>Quiénes somos</h2>
+                <p>Un equipo de docentes de la ULP que acerca la tecnología a toda la comunidad.</p>
+            </article>
+            <article class="tarjeta">
+                <h2>Modalidad</h2>
+                <p>Clases en vivo y grabaciones disponibles para repasar cuando quieras.</p>
+            </article>
+            <article class="tarjeta">
+                <h2>Certificación</h2>
+                <p>Al finalizar cada curso recibís un certificado digital emitido por la ULP.</p>
+            </article>
+        </section>
+
     </main>
-    <footer>
-        <p>Footer - Datos del grupo © 2026 Sitio web</p>
+    <footer class="pie">
+        <p>© 2026 ULP Tech · Trabajo Final Integrador · Programación Web 1</p>
+        <p><a href="https://www.ulp.edu.ar" target="_blank" rel="noopener">Sitio oficial de la Universidad de La
+                Punta</a></p>
     </footer>
     <script src="js/carrusel.js"></script>
 </body>
