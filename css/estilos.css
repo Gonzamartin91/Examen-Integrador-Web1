@@ -1,5 +1,49 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+/* ===== 1. VARIABLES ===== */
+:root {
+    /* Colores */
+    --azul: #16324F;
+    --azul-claro: #2C5F84;
+    --dorado: #C8932A;
+    --dorado-texto: #8A6116;
+
+    /* dorado oscuro: buen contraste para texto */
+    --fondo: #F7F5EF;
+    --blanco: #FFFFFF;
+    --texto: #1E1E1E;
+    --texto-suave: #6B675C;
+    --borde: #E1DBC8;
+    --verde: #205C3B;
+    --verde-claro: #EAF3EC;
+    --rojo: #B3261E;
+
+    /* Tipografías */
+    --fuente-titulos: "Fraunces", Georgia, serif;
+    --fuente-texto: "Inter", Arial, sans-serif;
+
+    /* Espacios (escala) */
+    --espacio-xs: 0.25rem;
+    --espacio-s: 0.5rem;
+    --espacio-m: 1rem;
+    --espacio-l: 1.5rem;
+    --espacio-xl: 2rem;
+
+    /* Bordes */
+    --radio: 6px;
+    --radio-chico: 4px;
+    --linea: 1px solid var(--borde);
+
+    /* Medidas */
+    --ancho-maximo: 960px;
+}
+
+/* ===== 2. RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
