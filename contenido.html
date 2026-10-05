@@ -31,32 +31,81 @@
             </ul>
         </nav>
     </header>
-    <main class="contenedor-columnas">
-        <!-- Contenido principal -->
-        <section class="columna-principal">
-            <article>
-                <h2>Titulo contenido principal</h2>
-                <img src="img/carrusel/garfield.png" alt="imagen-contenido-principal">
-                <p>un parrafo para el contenido principal</p>
-            </article>
-        </section>
-        <!-- fin contenido principal -->
+    <main class="contenido-pagina">
 
-        <!-- información secundaria o novedades -->
-        <section class="columna-secundaria">
-            <article>
-                <h3>Titulo para Novedades</h3>
-                <p>un parrafo para la columna secundaria</p>
-            </article>
-        </section>
-        <!-- fin información secundaria -->
+        <h1>Cursos de extensión y agenda de charlas</h1>
 
-        <!-- barra lateral - recursos -->
-        <aside class="columna-lateral">
-            <h3>Cosas de la Barra lateral</h3>
-            <p>Acá pueden ir enlaces, imágenes o algo</p>
-        </aside>
-        <!-- fin barra lateral -->
+        <div class="columnas">
+
+            <section class="columna columna-cursos">
+                <h2>Cursos</h2>
+                <article class="tarjeta-mini">
+                    <p class="etiqueta">8 semanas · inicial</p>
+                    <h3>Desarrollo Web Full Stack</h3>
+                    <p>HTML, CSS y JavaScript desde cero hasta publicar tu primer sitio en internet.</p>
+                </article>
+                <article class="tarjeta-mini">
+                    <p class="etiqueta">10 semanas · intermedio</p>
+                    <h3>Análisis de Datos con Python</h3>
+                    <p>Aprendé a limpiar, analizar y graficar datos reales con Python.</p>
+                </article>
+            </section>
+
+            <section class="columna columna-charlas">
+                <h2>Charlas</h2>
+                <article class="tarjeta-mini">
+                    <p class="etiqueta">05/10 · 19 h</p>
+                    <h3>IA aplicada</h3>
+                    <p>Usos concretos de la inteligencia artificial en el trabajo diario.</p>
+                </article>
+                <article class="tarjeta-mini">
+                    <p class="etiqueta">12/10 · 18:30 h</p>
+                    <h3>Testing de software</h3>
+                    <p>Por qué probar el código y cómo empezar a hacerlo.</p>
+                </article>
+            </section>
+
+            <aside class="columna columna-info">
+                <h2>Requisitos</h2>
+                <ul>
+                    <li>Computadora con 8 GB de RAM</li>
+                    <li>Conexión a internet estable</li>
+                    <li>Ganas de aprender</li>
+                </ul>
+                <h2>Preguntas frecuentes</h2>
+                <p><strong>¿Necesito ser estudiante de la ULP?</strong> No, las propuestas son abiertas a toda la
+                    comunidad.</p>
+            </aside>
+
+        </div>
+
+        <section class="agenda">
+            <h2>Agenda de charlas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Charla</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                        <th>Modalidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IA aplicada</td>
+                        <td>05/10</td>
+                        <td>19:00</td>
+                        <td>Virtual</td>
+                    </tr>
+                    <tr>
+                        <td>Testing de software</td>
+                        <td>12/10</td>
+                        <td>18:30</td>
+                        <td>Presencial</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
     <footer class="pie">
         <p>© 2026 ULP Tech · Trabajo Final Integrador · Programación Web 1</p>
