@@ -4,23 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>ULP Tech | Inscripción</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Contacto</h1>
-            <div>
-                <img src="img/generales/Odie.png" alt="logo-principal">
-            </div>
-            <div>
-                <a href="index.html">Inicio</a>
-                <a href="contenido.html">Contenido</a>
-                <a class="activa" href="contacto.html">Contacto</a>
-            </div>
+    <header class="encabezado">
+        <a class="marca" href="index.html">
+            <span class="marca-icono" aria-hidden="true">🎓</span>
+            <span class="marca-texto">
+                <strong>ULP Tech</strong>
+                <small>Universidad de La Punta</small>
+            </span>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contenido.html">Cursos y charlas</a></li>
+                <li><a class="activa" href="contacto.html" aria-current="page">Inscripción</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -44,7 +52,7 @@
             </div>
             <div>
                 <label for="frm-mensaje">Deja tu mensaje</label>
-                <textarea name="mensaje" name="mensaje" id="frm-mensaje"></textarea>
+                <textarea name="mensaje" id="frm-mensaje"></textarea>
             </div>
             <div>
                 <button type="submit">Enviar</button>
@@ -52,17 +60,10 @@
         </form>
         <!--contenedor para la respuesta del DOM -->
         <div id="mensaje-respuesta"></div>
-
-
     </main>
-
     <footer>
         <p>Footer - Datos del grupo © 2026 Sitio web</p>
     </footer>
-
-
-
-
     <script src="js/contacto.js"></script>
 </body>
 
