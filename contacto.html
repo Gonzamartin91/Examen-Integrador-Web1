@@ -31,35 +31,57 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <!-- inicio formulario -->
-        <form id="form-contacto" action="" method="post">
-            <div>
-                <label for="frm-nombre">Nombre:</label>
-                <input name="nombre" id="frm-nombre" type="text">
-            </div>
-            <div>
-                <label for="frm-apellido">Apellido:</label>
-                <input name="apellido" id="frm-apellido" type="text">
-            </div>
-            <div>
-                <label for="frm-correo">Correo:</label>
-                <input name="correo" id="frm-correo" type="email">
-            </div>
-            <div>
-                <label for="frm-tel">Teléfono:</label>
-                <input name="telefono" id="frm-tel" type="tel">
-            </div>
-            <div>
-                <label for="frm-mensaje">Deja tu mensaje</label>
-                <textarea name="mensaje" id="frm-mensaje"></textarea>
-            </div>
-            <div>
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
-        <!--contenedor para la respuesta del DOM -->
-        <div id="mensaje-respuesta"></div>
+    <main class="contenido-pagina">
+
+        <div class="contenedor-formulario">
+            <h1>Inscribite a un curso o charla</h1>
+
+            <!-- novalidate: desactiva los avisos del navegador porque la validación la hace contacto.js -->
+            <form id="form-contacto" novalidate>
+
+                <div class="campo">
+                    <label for="nombre">Nombre y apellido</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="50" autocomplete="name" required>
+                    <small class="mensaje-error" id="error-nombre"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" autocomplete="email" required>
+                    <small class="mensaje-error" id="error-correo"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" maxlength="20" autocomplete="tel"
+                        placeholder="Ej: 2664123456" required>
+                    <small class="mensaje-error" id="error-telefono"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="curso">Curso o charla de interés</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Elegí una opción</option>
+                        <option value="web">Curso: Desarrollo Web Full Stack</option>
+                        <option value="datos">Curso: Análisis de Datos con Python</option>
+                        <option value="ia">Charla: IA aplicada</option>
+                        <option value="testing">Charla: Testing de software</option>
+                    </select>
+                    <small class="mensaje-error" id="error-curso"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Consulta</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" maxlength="300" required></textarea>
+                    <small class="mensaje-error" id="error-mensaje"></small>
+                </div>
+
+                <button class="boton" type="submit">Enviar inscripción</button>
+            </form>
+
+            <!-- Acá contacto.js agrega el resumen de los datos enviados -->
+            <div id="mensaje-respuesta" aria-live="polite"></div>
+        </div>
     </main>
     <footer class="pie">
         <p>© 2026 ULP Tech · Trabajo Final Integrador · Programación Web 1</p>
