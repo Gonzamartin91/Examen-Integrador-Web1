@@ -101,6 +101,54 @@ a:focus-visible, button:focus-visible {
     border-bottom: 3px solid var(--dorado);
 }
 
-.menu {
+.marca {
     display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+}
+
+.marca-icono {
+    font-size: 1.8rem;
+}
+
+.marca-texto strong {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    color: var(--azul);
+}
+
+.marca-texto small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--texto-suave);
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 0.45rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--azul);
+}
+
+.menu a hover {
+    background-color: var(--fondo);
+}
+
+.menu a[aria-current="page"] {
+    background-color: var(--azul);
+    color: var(--blanco);
 }
