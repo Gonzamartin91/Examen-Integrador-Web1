@@ -160,20 +160,23 @@ button:focus-visible {
     padding: 1rem;
     font-size: 0.85rem;
 }
-.pie p{
+
+.pie p {
     margin-bottom: 0;
 }
-.pie p a{
+
+.pie p a {
     text-decoration: none;
     color: var(--blanco);
 }
-.pie p a:hover{
+
+.pie p a:hover {
     color: var(--dorado);
 }
 
 /* contenedor de la página */
 
-.contenido-pagina{
+.contenido-pagina {
     flex: 1;
     width: 100%;
     max-width: 960px;
@@ -182,61 +185,90 @@ button:focus-visible {
 }
 
 /* pagina de inicio */
-.hero{
+.hero {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
 }
-.hero-texto{
+
+.hero-texto {
     flex: 1 1 260px;
     /* 1 se puede achicar 1 se puede agrandar - 260px de maximo */
 }
-.hero-texto p{
- color: var(--texto-suave);
- max-width: 40ch;
+
+.hero-texto p {
+    color: var(--texto-suave);
+    max-width: 40ch;
 }
-.hero-texto .eslogan{
+
+.hero-texto .eslogan {
     font-family: var(--fuente-titulos);
     font-style: italic;
     font-size: 1.1rem;
     color: var(--dorado-texto);
 }
-.carrusel{
+
+.carrusel {
     flex: 1 1 300px;
 }
-.carrusel-visor{
+
+.carrusel-visor {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-.carrusel-figura{
+
+.carrusel-figura {
     flex: 1;
     min-width: 0;
     background-color: var(--blanco);
     border: 1px solid var(--borde);
     border-radius: 6px;
-    overflow:hidden;
+    overflow: hidden;
 }
-.carrusel-figura span{
+
+.carrusel-figura span {
     margin: 0.75rem;
     color: var(--azul);
 }
-.carrusel-figura img{
+
+.carrusel-figura img {
     width: 100%;
     height: 180px;
-    object-fit:contain;
+    object-fit: contain;
     /* object-position: top; */
 }
-.carrusel-figura figcaption{
+
+.carrusel-figura figcaption {
     padding: 0.6rem;
 }
-.carrusel-figura h2{
+
+.carrusel-figura h2 {
     font-size: 1.05rem;
     margin-bottom: 0.2rem;
 }
-.carrusel-figura p{
+
+.carrusel-figura p {
     font-size: 0.85rem;
     color: var(--texto-suave);
     margin-bottom: 0;
+}
+
+.carrusel-boton {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--borde);
+    border-radius: 50%;
+    background-color: var(--blanco);
+    color: var(--azul);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.carrusel-boton hover {
+    background-color: var(--azul);
+    color: var(--blanco);
 }
