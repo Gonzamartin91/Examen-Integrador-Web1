@@ -129,9 +129,6 @@ a:focus-visible, button:focus-visible {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-}
-
-.menu ul {
     list-style: none;
 }
 
