@@ -47,3 +47,60 @@ img {
     display: block;
     max-width: 100%;
 }
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--texto);
+    background-color: var(--fondo);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--azul);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.05rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: var(--azul-claro);
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 2px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--blanco);
+    border-bottom: 3px solid var(--dorado);
+}
+
+.menu {
+    display: flex;
+}
