@@ -268,7 +268,7 @@ button:focus-visible {
     flex-shrink: 0;
 }
 
-.carrusel-boton hover {
+.carrusel-boton:hover {
     background-color: var(--azul);
     color: var(--blanco);
 }
