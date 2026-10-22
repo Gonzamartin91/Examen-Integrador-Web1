@@ -353,3 +353,59 @@ button:focus-visible {
     font-size: 0.9rem;
     color: var(--texto-suave);
 }
+
+.tarjeta-mini {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.tarjeta-mini .etiqueta {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--dorado-texto);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.tarjeta-mini h3 {
+    margin-bottom: 0.2rem;
+}
+
+.tarjeta-mini p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    margin-bottom: 0;
+}
+
+.agenda {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.agenda table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    font-size: 0.9rem;
+}
+
+.agenda th,
+.agenda td {
+    padding: 0.7rem 1rem;
+    text-align: left;
+}
+
+.agenda thead th {
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+.agenda tbody tr:nth-child(even) {
+    background-color: var(--fondo);
+}
