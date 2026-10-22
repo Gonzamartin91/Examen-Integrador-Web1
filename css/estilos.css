@@ -217,6 +217,7 @@ button:focus-visible {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
 }
 
 .carrusel-figura {
@@ -228,16 +229,27 @@ button:focus-visible {
     overflow: hidden;
 }
 
-.carrusel-figura span {
-    margin: 0.75rem;
+.carrusel-etiqueta {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    z-index: 1;
     color: var(--azul);
+    background-color: var(--dorado);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+
 }
 
 .carrusel-figura img {
     width: 100%;
     height: 180px;
-    object-fit: contain;
-    /* object-position: top; */
+    object-fit: cover;
 }
 
 .carrusel-figura figcaption {
@@ -260,16 +272,27 @@ button:focus-visible {
     height: 2.5rem;
     border: 1px solid var(--borde);
     border-radius: 50%;
-    background-color: var(--blanco);
+    background-color: rgba(255, 255, 255, 0.6);
     color: var(--azul);
     font-size: 1.5rem;
     line-height: 1;
     cursor: pointer;
     flex-shrink: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#btn-anterior {
+    left: 0.5rem;
+}
+
+#btn-siguiente {
+    right: 0.5rem;
 }
 
 .carrusel-boton:hover {
-    background-color: var(--azul);
+    background-color: rgba(22, 50, 79, 0.8);
     color: var(--blanco);
 }
 
