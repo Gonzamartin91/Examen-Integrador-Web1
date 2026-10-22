@@ -272,3 +272,84 @@ button:focus-visible {
     background-color: var(--azul);
     color: var(--blanco);
 }
+
+.carrusel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+}
+
+/* HACER LA EDICION DE LOS CIRCULITOS SEÑALADORES */
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--borde);
+}
+
+.tarjeta {
+    flex: 1 1 200px;
+}
+
+.tarjeta h2 {
+    font-size: 1.05rem;
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+/* PAGINA CURSOS Y CHARLAS - TRES COLUMNAS CON FLEXBOX */
+
+.columnas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* LA COLUMNA DE CURSOS CRECE EL DOBLE QUE LA DE INFO */
+
+.columna-cursos {
+    flex: 2 1 220px;
+}
+
+.columna-charlas {
+    flex: 1.5 1 200px;
+}
+
+.columna-info {
+    flex: 1 1 180px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.columna h2 {
+    font-size: 1.15rem;
+}
+
+.columna-info h2 {
+    font-size: 1.15rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--borde);
+}
+
+.columna-info ul {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    padding-bottom: 0.8rem;
+    color: var(--texto-suave);
+}
+
+.columna-info p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
