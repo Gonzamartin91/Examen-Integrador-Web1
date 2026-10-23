@@ -485,7 +485,17 @@ button:focus-visible {
     box-shadow: 0 0 0 3px rgba(44, 95, 132, 0.25);
 }
 
-/* AGREGAR CSS DE VALIDACIONES */
+.campo .campo-invalido {
+    border-color: var(--rojo);
+}
+
+.mensaje-error {
+    display: block;
+    min-height: 1.2em;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--rojo);
+}
 
 .boton {
     padding: 0.65rem 1.4rem;
