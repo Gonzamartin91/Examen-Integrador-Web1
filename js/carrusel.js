@@ -51,7 +51,6 @@ function crearIndicadores() {
 }
 
 function mostrarCurso() {
-    debugger;
     const curso = cursos[indiceActual];
     imagenCarrusel.src = curso.imagen;
     imagenCarrusel.alt = curso.alt;
