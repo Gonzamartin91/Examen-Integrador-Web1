@@ -4,10 +4,12 @@
     --azul: #16324F;
     --azul-claro: #2C5F84;
     --dorado: #C8932A;
+    --dorado-claro: #d6ad5d;
     --dorado-texto: #8A6116;
 
     /* dorado oscuro: buen contraste para texto */
     --fondo: #F7F5EF;
+    --fondo-claro: #ede9e2;
     --blanco: #FFFFFF;
     --texto: #1E1E1E;
     --texto-suave: #6B675C;
@@ -229,6 +231,13 @@ button:focus-visible {
     overflow: hidden;
 }
 
+.carrusel-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
 .carrusel-etiqueta {
     position: absolute;
     top: 0.6rem;
@@ -243,7 +252,6 @@ button:focus-visible {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     white-space: nowrap;
-
 }
 
 .carrusel-figura img {
@@ -268,12 +276,12 @@ button:focus-visible {
 }
 
 .carrusel-boton {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border: 1px solid var(--borde);
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
-    color: var(--azul);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--blanco);
     font-size: 1.5rem;
     line-height: 1;
     cursor: pointer;
@@ -303,7 +311,16 @@ button:focus-visible {
     margin-top: 0.8rem;
 }
 
-/* HACER LA EDICION DE LOS CIRCULITOS SEÑALADORES */
+.punto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--borde);
+}
+
+.punto.activo {
+    background-color: var(--dorado);
+}
 
 .tarjetas {
     display: flex;
@@ -402,6 +419,29 @@ button:focus-visible {
     font-size: 0.9rem;
     color: var(--texto-suave);
     margin-bottom: 0;
+}
+
+.tarjeta-mini:target {
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 1.5px var(--dorado);
+    background-color: var(--fondo-claro);
+}
+
+.enlace-ver {
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--azul);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.enlace-ver:hover {
+    background-color: var(--azul-claro);
 }
 
 .agenda {
