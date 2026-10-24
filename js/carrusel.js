@@ -4,6 +4,7 @@ const cursos = [
         alt: "Imagen sobre curso de Desarrollo Web Full Stack",
         titulo: "Desarrollo Web Full Stack",
         descripcion: "8 semanas · Nivel inicial",
+        etiqueta: "DESTACADO",
         enlaceVer: "contenido.html#fullstack"
     },
     {
@@ -25,6 +26,7 @@ const cursos = [
         alt: "Imagen sobre Charla: Testing de Software",
         titulo: "Charla: Testing de Software",
         descripcion: "06/11/2026 · 09:00 hs",
+        etiqueta: "ÚLTIMOS CUPOS",
         enlaceVer: "contenido.html#testing"
     }
 ];
@@ -34,6 +36,7 @@ let indiceActual = 0;
 const imagenCarrusel = document.getElementById("imagen-carrusel");
 const tituloCarrusel = document.getElementById("titulo-carrusel");
 const descripcionCarrusel = document.getElementById("descripcion-carrusel");
+const etiqueta = document.getElementById("carrusel-etiqueta");
 const botonAnterior = document.getElementById("btn-anterior");
 const botonSiguiente = document.getElementById("btn-siguiente");
 const enlaceVer = document.getElementById("enlace-ver");
@@ -48,12 +51,19 @@ function crearIndicadores() {
 }
 
 function mostrarCurso() {
+    debugger;
     const curso = cursos[indiceActual];
     imagenCarrusel.src = curso.imagen;
     imagenCarrusel.alt = curso.alt;
     tituloCarrusel.textContent = curso.titulo;
     descripcionCarrusel.textContent = curso.descripcion;
     enlaceVer.href = curso.enlaceVer;
+    if (curso.etiqueta) {
+        etiqueta.textContent = curso.etiqueta;
+        etiqueta.classList.remove("oculto");
+    } else {
+        etiqueta.classList.add("oculto");
+    }
 
     const puntos = contenedorIndicadores.children;
     for (let i = 0; i < puntos.length; i++) {

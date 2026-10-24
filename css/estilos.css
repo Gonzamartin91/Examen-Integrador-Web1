@@ -238,6 +238,10 @@ button:focus-visible {
     gap: 0.5rem;
 }
 
+.oculto {
+    display: none;
+}
+
 .carrusel-etiqueta {
     position: absolute;
     top: 0.6rem;
