@@ -577,3 +577,45 @@ button:focus-visible {
     list-style: none;
     font-size: 0.9rem;
 }
+
+.menu-boton {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .menu-boton {
+        display: block;
+        margin-left: auto;
+        padding: 0.3rem 0.6rem;
+        border: 1px solid var(--borde);
+        border-radius: 4px;
+        background-color: var(--blanco);
+        color: var(--azul);
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.abierto {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 0.5rem
+    }
+
+    .menu a {
+        display: block;
+        padding: 0.7rem;
+    }
+}
