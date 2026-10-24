@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <!-- Ilustración original: Testing de software -->
+  <defs>
+    <radialGradient id="fondo" cx="50%" cy="50%" r="65%">
+      <stop offset="0" stop-color="#2C5F84"/>
+      <stop offset="1" stop-color="#16324F"/>
+    </radialGradient>
+    <pattern id="puntos" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#F7F5EF" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="300" fill="url(#fondo)"/>
+  <rect width="800" height="300" fill="url(#puntos)"/>
+
+  <!-- Hoja de checklist -->
+  <rect x="250" y="72" width="200" height="158" rx="10" fill="#0E2238" opacity="0.35" transform="translate(6 6)"/>
+  <rect x="250" y="72" width="200" height="158" rx="10" fill="#F7F5EF"/>
+  <rect x="320" y="64" width="60" height="18" rx="6" fill="#C8932A"/>
+
+  <!-- Fila 1: aprobada -->
+  <rect x="272" y="98" width="22" height="22" rx="5" fill="#EAF3EC" stroke="#205C3B" stroke-width="2.5"/>
+  <polyline points="277,109 282,114 290,104" fill="none" stroke="#205C3B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="306" y="105" width="120" height="8" rx="4" fill="#2C5F84"/>
+
+  <!-- Fila 2: aprobada -->
+  <rect x="272" y="130" width="22" height="22" rx="5" fill="#EAF3EC" stroke="#205C3B" stroke-width="2.5"/>
+  <polyline points="277,141 282,146 290,136" fill="none" stroke="#205C3B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="306" y="137" width="96" height="8" rx="4" fill="#2C5F84"/>
+
+  <!-- Fila 3: fallida -->
+  <rect x="272" y="162" width="22" height="22" rx="5" fill="#F7E3E1" stroke="#B3261E" stroke-width="2.5"/>
+  <path d="M278 168l10 10m0-10l-10 10" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+  <rect x="306" y="169" width="110" height="8" rx="4" fill="#2C5F84"/>
+
+  <!-- Fila 4: pendiente -->
+  <rect x="272" y="194" width="22" height="22" rx="5" fill="none" stroke="#6B675C" stroke-width="2.5" opacity="0.6"/>
+  <rect x="306" y="201" width="80" height="8" rx="4" fill="#6B675C" opacity="0.4"/>
+
+  <!-- Lupa sobre la fila fallida -->
+  <line x1="545" y1="197" x2="582" y2="232" stroke="#C8932A" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="510" cy="164" r="46" fill="#F7F5EF" fill-opacity="0.18" stroke="#F7F5EF" stroke-width="9"/>
+  <circle cx="510" cy="164" r="46" fill="none" stroke="#C8932A" stroke-width="3"/>
+  <!-- "Bug" dentro de la lupa -->
+  <g transform="translate(510 166)">
+    <ellipse cx="0" cy="0" rx="12" ry="16" fill="#B3261E"/>
+    <circle cx="0" cy="-19" r="7" fill="#B3261E"/>
+    <line x1="0" y1="-14" x2="0" y2="16" stroke="#F7F5EF" stroke-width="2"/>
+    <g stroke="#F7F5EF" stroke-width="3" stroke-linecap="round">
+      <path d="M-12 -6h-11M-12 4h-11M-10 12l-9 7"/>
+      <path d="M12 -6h11M12 4h11M10 12l9 7"/>
+      <path d="M-4 -25l-5 -7M4 -25l5 -7"/>
+    </g>
+  </g>
+
+  <!-- Detalles decorativos -->
+  <circle cx="200" cy="100" r="7" fill="none" stroke="#C8932A" stroke-width="3"/>
+  <path d="M196 196l8 8m0-8l-8 8" stroke="#F7F5EF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="620" cy="96" r="6" fill="none" stroke="#F7F5EF" stroke-width="3" opacity="0.5"/>
+</svg>

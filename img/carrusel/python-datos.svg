@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <!-- Ilustración original: Análisis de Datos con Python -->
+  <defs>
+    <radialGradient id="fondo" cx="50%" cy="50%" r="65%">
+      <stop offset="0" stop-color="#2C5F84"/>
+      <stop offset="1" stop-color="#16324F"/>
+    </radialGradient>
+    <pattern id="puntos" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#F7F5EF" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="300" fill="url(#fondo)"/>
+  <rect width="800" height="300" fill="url(#puntos)"/>
+
+  <!-- Panel del gráfico -->
+  <rect x="190" y="76" width="300" height="152" rx="10" fill="#0E2238" opacity="0.35" transform="translate(6 6)"/>
+  <rect x="190" y="76" width="300" height="152" rx="10" fill="#F7F5EF"/>
+
+  <!-- Ejes -->
+  <line x1="216" y1="96" x2="216" y2="206" stroke="#6B675C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="216" y1="206" x2="468" y2="206" stroke="#6B675C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <g stroke="#E1DBC8" stroke-width="2">
+    <line x1="222" y1="126" x2="468" y2="126"/>
+    <line x1="222" y1="156" x2="468" y2="156"/>
+    <line x1="222" y1="181" x2="468" y2="181"/>
+  </g>
+
+  <!-- Barras -->
+  <rect x="236" y="166" width="26" height="40" rx="3" fill="#2C5F84"/>
+  <rect x="280" y="146" width="26" height="60" rx="3" fill="#2C5F84"/>
+  <rect x="324" y="156" width="26" height="50" rx="3" fill="#2C5F84"/>
+  <rect x="368" y="124" width="26" height="82" rx="3" fill="#C8932A"/>
+  <rect x="412" y="108" width="26" height="98" rx="3" fill="#2C5F84"/>
+
+  <!-- Línea de tendencia -->
+  <polyline points="249,150 293,128 337,138 381,104 425,90" fill="none" stroke="#B3261E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#F7F5EF" stroke="#B3261E" stroke-width="3">
+    <circle cx="249" cy="150" r="5"/>
+    <circle cx="293" cy="128" r="5"/>
+    <circle cx="337" cy="138" r="5"/>
+    <circle cx="381" cy="104" r="5"/>
+    <circle cx="425" cy="90" r="5"/>
+  </g>
+
+  <!-- Terminal -->
+  <rect x="512" y="104" width="118" height="104" rx="9" fill="#0E2238"/>
+  <rect x="512" y="104" width="118" height="20" rx="9" fill="#2C5F84"/>
+  <rect x="512" y="116" width="118" height="8" fill="#2C5F84"/>
+  <circle cx="525" cy="114" r="3.5" fill="#F7F5EF" opacity="0.7"/>
+  <circle cx="537" cy="114" r="3.5" fill="#F7F5EF" opacity="0.7"/>
+  <polyline points="526,140 534,146 526,152" fill="none" stroke="#C8932A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="542" y="142" width="64" height="7" rx="3.5" fill="#F7F5EF" opacity="0.85"/>
+  <rect x="526" y="162" width="80" height="7" rx="3.5" fill="#C8932A" opacity="0.8"/>
+  <rect x="526" y="178" width="52" height="7" rx="3.5" fill="#F7F5EF" opacity="0.5"/>
+  <rect x="584" y="176" width="10" height="12" fill="#C8932A"/>
+
+  <!-- Detalles decorativos -->
+  <circle cx="160" cy="210" r="8" fill="none" stroke="#C8932A" stroke-width="3" opacity="0.7"/>
+  <circle cx="656" cy="92" r="6" fill="none" stroke="#C8932A" stroke-width="3"/>
+  <path d="M652 214l8 8m0-8l-8 8" stroke="#F7F5EF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <!-- Ilustración original: Desarrollo Web Full Stack -->
+  <defs>
+    <radialGradient id="fondo" cx="50%" cy="50%" r="65%">
+      <stop offset="0" stop-color="#2C5F84"/>
+      <stop offset="1" stop-color="#16324F"/>
+    </radialGradient>
+    <pattern id="puntos" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#F7F5EF" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="300" fill="url(#fondo)"/>
+  <rect width="800" height="300" fill="url(#puntos)"/>
+
+  <!-- Ventana del navegador -->
+  <rect x="200" y="78" width="290" height="150" rx="10" fill="#0E2238" opacity="0.35" transform="translate(6 6)"/>
+  <rect x="200" y="78" width="290" height="150" rx="10" fill="#F7F5EF"/>
+  <path d="M210 78h270a10 10 0 0 1 10 10v16H200V88a10 10 0 0 1 10-10z" fill="#E1DBC8"/>
+  <circle cx="216" cy="91" r="4" fill="#B3261E"/>
+  <circle cx="230" cy="91" r="4" fill="#C8932A"/>
+  <circle cx="244" cy="91" r="4" fill="#205C3B"/>
+  <rect x="262" y="86" width="150" height="10" rx="5" fill="#F7F5EF"/>
+
+  <!-- Símbolo </> -->
+  <g fill="none" stroke="#16324F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="248,140 228,160 248,180"/>
+    <polyline points="306,140 326,160 306,180"/>
+  </g>
+  <line x1="286" y1="134" x2="268" y2="186" stroke="#C8932A" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Líneas de código -->
+  <rect x="350" y="124" width="110" height="9" rx="4.5" fill="#2C5F84"/>
+  <rect x="362" y="142" width="80" height="9" rx="4.5" fill="#C8932A"/>
+  <rect x="362" y="160" width="100" height="9" rx="4.5" fill="#6B675C" opacity="0.5"/>
+  <rect x="350" y="178" width="60" height="9" rx="4.5" fill="#2C5F84"/>
+  <rect x="228" y="204" width="232" height="8" rx="4" fill="#E1DBC8"/>
+
+  <!-- Conexión cliente-servidor -->
+  <path d="M496 153 H 538" stroke="#C8932A" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <circle cx="517" cy="153" r="5" fill="#C8932A"/>
+
+  <!-- Servidor -->
+  <g>
+    <rect x="548" y="92" width="74" height="38" rx="7" fill="#F7F5EF"/>
+    <rect x="548" y="136" width="74" height="38" rx="7" fill="#F7F5EF"/>
+    <rect x="548" y="180" width="74" height="38" rx="7" fill="#F7F5EF"/>
+    <circle cx="566" cy="111" r="5" fill="#C8932A"/>
+    <circle cx="566" cy="155" r="5" fill="#205C3B"/>
+    <circle cx="566" cy="199" r="5" fill="#C8932A"/>
+    <rect x="580" y="107" width="30" height="7" rx="3.5" fill="#2C5F84"/>
+    <rect x="580" y="151" width="30" height="7" rx="3.5" fill="#2C5F84"/>
+    <rect x="580" y="195" width="30" height="7" rx="3.5" fill="#2C5F84"/>
+  </g>
+
+  <!-- Detalles decorativos -->
+  <circle cx="168" cy="96" r="6" fill="none" stroke="#C8932A" stroke-width="3"/>
+  <circle cx="652" cy="214" r="9" fill="none" stroke="#C8932A" stroke-width="3" opacity="0.7"/>
+  <path d="M160 206l8 8m0-8l-8 8" stroke="#F7F5EF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+</svg>
