@@ -1,12 +1,14 @@
+const formulario = document.getElementById("form-contacto");
 const nombre = document.getElementById("nombre");
 const correo = document.getElementById("correo");
 const telefono = document.getElementById("telefono");
 const curso  = document.getElementById("curso");
 const mensaje = document.getElementById("mensaje");
+const respuesta = document.getElementById("mensaje-respuesta");
 
 const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/;
-const regexCorreo = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
-const regexTelefono = /^[0-9]{8,15}$/;
+const regexCorreo = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+const regexTelefono = /^\+?[0-9]{8,15}$/;
 
 function mostrarError(campo, texto) {
     const small = document.getElementById("error-" + campo.id);
@@ -20,10 +22,10 @@ function limpiarError(campo) {
     campo.classList.remove("campo-invalido");
 }
 
-function validarNombre(nombre) {
+function validarNombre() {
     const valor = nombre.value.trim();
     if (valor === "") {
-        mostrarError(nombre, "El nombre es obligatorio.");
+        mostrarError(nombre, "El nombre y apellido es obligatorio.");
         return false;
     }
     if (valor.length < 3) {
@@ -87,4 +89,58 @@ function validarMensaje() {
     }
     limpiarError(mensaje);
     return true;
+}
+
+nombre.addEventListener("input", validarNombre);
+correo.addEventListener("input", validarCorreo);
+telefono.addEventListener("input", validarTelefono);
+curso.addEventListener("change", validarCurso);
+mensaje.addEventListener("input", validarMensaje);
+
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    /* Llamanos a todas las funciones así se muestran todos los errores juntos */
+    const nombreOk = validarNombre();
+    const correoOk = validarCorreo();
+    const telefonoOk = validarTelefono();
+    const cursoOk = validarCurso();
+    const mensajeOk = validarMensaje();
+
+    if (nombreOk && correoOk && telefonoOk && cursoOk && mensajeOk) {
+        mostrarResumen();
+        formulario.reset();
+    } else {
+        respuesta.textContent = "";
+    }
+});
+
+function mostrarResumen(){
+    const cursoElegido = curso.options[curso.selectedIndex].text;
+
+    respuesta.textContent = "";
+
+    const caja = document.createElement("div");
+    caja.classList.add("confirmacion");
+
+    const titulo = document.createElement("h2");
+    titulo.textContent = "¡Gracias, " + nombre.value + "! Tu pre-inscripción fue registrada.";
+
+    const lista = document.createElement("ul");
+    const datos = [
+        "Nombre: " + nombre.value.trim(),
+        "Correo: " + correo.value.trim(),
+        "Teléfono: " + telefono.value.trim(),
+        "Curso: " + cursoElegido,
+        "Consulta: " + mensaje.value.trim()
+    ];
+    datos.forEach(function(dato){
+        const item = document.createElement("li");
+        item.textContent = dato;
+        lista.appendChild(item);
+    });
+
+    caja.appendChild(titulo);
+    caja.appendChild(lista);
+    respuesta.appendChild(caja);
 }

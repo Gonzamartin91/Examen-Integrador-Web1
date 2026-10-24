@@ -513,3 +513,23 @@ button:focus-visible {
     display: block;
     margin-left: auto;
 }
+.boton:hover{
+    background-color: var(--azul-claro);
+}
+
+.confirmacion{
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    background-color: var(--verde-claro);
+    border: 1px solid var(--verde);
+    border-radius: 6px;
+    color: var(--verde);
+}
+.confirmacion h2{
+    font-size: 1.05rem;
+    color: var(--verde);
+}
+.confirmacion ul{
+    list-style: none;
+    font-size: 0.9rem;
+}
