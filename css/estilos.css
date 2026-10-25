@@ -618,4 +618,54 @@ button:focus-visible {
         display: block;
         padding: 0.7rem;
     }
+    .agenda thead {
+        display: none;
+    }
+    .agenda table,
+    .agenda tbody,
+    .agenda tr,
+    .agenda td {
+        display: block;
+        width: 100%;
+    }
+    .agenda table {
+        border: none;
+        background-color: transparent;
+    }
+    .agenda tr {
+        margin-bottom: var(--espacio-m);
+        border: var(--linea);
+        border-radius: var(--radio);
+        background-color: var(--blanco);
+        overflow: hidden;
+    }
+
+    .agenda td {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--espacio-m);
+        padding: 0.6rem 1rem;
+        border-bottom: var(--linea);
+    }
+
+    .agenda td:last-child {
+        border-bottom: none;
+    }
+
+    .agenda td::before{
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--azul);
+    }
+
+    .agenda td:first-child {
+        background-color: var(--azul);
+        color: var(--blanco);
+        font-family: var(--fuente-titulos);
+        font-size: 1rem;
+    }
+
+    .agenda td:first-child::before {
+        content: none;
+    }
 }
