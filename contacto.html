@@ -69,10 +69,14 @@
                     <label for="curso">Curso o charla de interés</label>
                     <select id="curso" name="curso" required>
                         <option value="">Elegí una opción</option>
-                        <option value="web">Curso: Desarrollo Web - Full Stack</option>
-                        <option value="datos">Curso: Análisis de datos con Python</option>
-                        <option value="ia">Charla: IA aplicada</option>
-                        <option value="testing">Charla: Testing de software</option>
+                        <optgroup label="Cursos">
+                            <option value="web">Desarrollo Web - Full Stack</option>
+                            <option value="datos">Análisis de datos con Python</option>
+                        </optgroup>
+                        <optgroup label="Charlas">
+                            <option value="ia">IA aplicada</option>
+                            <option value="testing">Testing de software</option>
+                        </optgroup>
                     </select>
                     <small class="mensaje-error" id="error-curso"></small>
                 </div>
