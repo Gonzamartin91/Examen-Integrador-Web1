@@ -1,8 +1,8 @@
 const cursos = [
     {
         imagen: "img/carrusel/fullstack.svg",
-        alt: "Imagen sobre curso de Desarrollo Web Full Stack",
-        titulo: "Desarrollo Web Full Stack",
+        alt: "Imagen sobre curso de Desarrollo Web - Full Stack",
+        titulo: "Desarrollo Web - Full Stack",
         descripcion: "8 semanas · Nivel inicial",
         etiqueta: "DESTACADO",
         enlaceVer: "contenido.html#fullstack"
@@ -16,8 +16,8 @@ const cursos = [
     },
     {
         imagen: "img/carrusel/python-datos.svg",
-        alt: "Imagen sobre curso de Análisis de datos con Phyton",
-        titulo: "Análisis de datos con Phyton",
+        alt: "Imagen sobre curso de Análisis de datos con Python",
+        titulo: "Análisis de datos con Python",
         descripcion: "10 semanas · Nivel intermedio",
         enlaceVer: "contenido.html#python-datos"
     },
