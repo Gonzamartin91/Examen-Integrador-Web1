@@ -114,7 +114,8 @@ button:focus-visible {
 }
 
 .marca-icono {
-    font-size: 1.8rem;
+    width: 2.2rem;
+    height: 2.2rem;
 }
 
 .marca-texto strong {
@@ -557,11 +558,12 @@ button:focus-visible {
     display: block;
     margin-left: auto;
 }
-.boton:hover{
+
+.boton:hover {
     background-color: var(--azul-claro);
 }
 
-.confirmacion{
+.confirmacion {
     margin-top: 1.5rem;
     padding: 1rem 1.2rem;
     background-color: var(--verde-claro);
@@ -569,11 +571,13 @@ button:focus-visible {
     border-radius: 6px;
     color: var(--verde);
 }
-.confirmacion h2{
+
+.confirmacion h2 {
     font-size: 1.05rem;
     color: var(--verde);
 }
-.confirmacion ul{
+
+.confirmacion ul {
     list-style: none;
     font-size: 0.9rem;
 }
@@ -624,9 +628,11 @@ button:focus-visible {
         border: var(--linea);
         border-radius: var(--radio);
     }
+
     .agenda thead {
         display: none;
     }
+
     .agenda table,
     .agenda tbody,
     .agenda tr,
@@ -634,10 +640,12 @@ button:focus-visible {
         display: block;
         width: 100%;
     }
+
     .agenda table {
         border: none;
         background-color: transparent;
     }
+
     .agenda tr {
         margin-bottom: var(--espacio-m);
         border: var(--linea);
@@ -658,7 +666,7 @@ button:focus-visible {
         border-bottom: none;
     }
 
-    .agenda td::before{
+    .agenda td::before {
         content: attr(data-label);
         font-weight: 600;
         color: var(--azul);
