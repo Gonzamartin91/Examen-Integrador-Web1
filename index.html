@@ -29,6 +29,7 @@
             ☰
         </button>
 
+        <!-- Menú común a las 3 páginas: aria-current="page" marca la página activa -->
         <nav class="menu" id="menu-principal" aria-label="Menú principal">
             <ul>
                 <li><a href="index.html" aria-current="page">Inicio</a></li>
@@ -47,6 +48,7 @@
                     quieren aprender tecnología: estudiantes, docentes y cualquier persona interesada.</p>
             </div>
 
+            <!-- Carrusel: el contenido inicial coincide con el primer curso de carrusel.js, así la página se ve completa antes de que cargue el JS -->
             <section class="carrusel" aria-label="Cursos destacados">
                 <div class="carrusel-visor">
                     <button class="carrusel-boton" id="btn-anterior" type="button"
@@ -95,6 +97,7 @@
         <p><a href="https://www.ulp.edu.ar" target="_blank" rel="noopener">Sitio oficial de la Universidad de La
                 Punta</a></p>
     </footer>
+    <!-- Scripts al final del body: el HTML ya está cargado cuando el JS busca sus elementos -->
     <script src="js/carrusel.js"></script>
     <script src="js/menu.js"></script>
 </body>

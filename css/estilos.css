@@ -87,6 +87,9 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
+
+/* ===== 3. ESTRUCTURA COMÚN: ENCABEZADO, MENÚ Y PIE (igual en las 3 páginas) ===== */
+
 .encabezado {
     display: flex;
     justify-content: space-between;
@@ -143,6 +146,7 @@ button:focus-visible {
     background-color: var(--fondo);
 }
 
+/* Página activa: el HTML marca su enlace con aria-current="page" y acá se le da el estilo */
 .menu a[aria-current="page"] {
     background-color: var(--azul);
     color: var(--blanco);
@@ -169,8 +173,7 @@ button:focus-visible {
     color: var(--dorado);
 }
 
-/* contenedor de la página */
-
+/* Contenedor central: limita el ancho del contenido en todas las páginas */
 .contenido-pagina {
     flex: 1;
     width: 100%;
@@ -179,7 +182,10 @@ button:focus-visible {
     padding: 2rem 1.5rem;
 }
 
-/* pagina de inicio */
+
+
+/* ===== 4. INICIO: HERO, CARRUSEL Y TARJETAS ===== */
+
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -208,6 +214,7 @@ button:focus-visible {
     flex: 1 1 300px;
 }
 
+/* position: relative sirve de referencia para ubicar los botones y la etiqueta encima de la imagen */
 .carrusel-visor {
     display: flex;
     align-items: center;
@@ -231,6 +238,7 @@ button:focus-visible {
     gap: 0.5rem;
 }
 
+/* Clase que usa carrusel.js para ocultar la etiqueta cuando el curso no tiene */
 .oculto {
     display: none;
 }
@@ -272,6 +280,7 @@ button:focus-visible {
     margin-bottom: 0;
 }
 
+/* Botones del carrusel: position absolute los ubica sobre la imagen, a los costados */
 .carrusel-boton {
     width: 2.2rem;
     height: 2.2rem;
@@ -315,6 +324,7 @@ button:focus-visible {
     background-color: var(--borde);
 }
 
+/* Punto del curso visible: la clase activo la pone carrusel.js */
 .punto.activo {
     background-color: var(--dorado);
 }
@@ -341,7 +351,7 @@ button:focus-visible {
     color: var(--texto-suave);
 }
 
-/* PAGINA CURSOS Y CHARLAS - TRES COLUMNAS CON FLEXBOX */
+/* ===== 5. CURSOS Y CHARLAS: TRES COLUMNAS CON FLEXBOX ===== */
 
 .columnas {
     display: flex;
@@ -351,7 +361,7 @@ button:focus-visible {
     margin-top: 1rem;
 }
 
-/* LA COLUMNA DE CURSOS CRECE EL DOBLE QUE LA DE INFO */
+/* flex: crecimiento, encogimiento y ancho base. La columna de cursos crece el doble que la de información; con flex-wrap, las columnas se apilan cuando no entran */
 
 .columna-cursos {
     flex: 2 1 220px;
@@ -423,6 +433,7 @@ button:focus-visible {
     margin-bottom: 0;
 }
 
+/* :target resalta la tarjeta cuyo id coincide con el # de la URL, es decir, a la que se llega con el botón VER del carrusel */
 .tarjeta-mini:target {
     border-color: var(--dorado);
     box-shadow: 0 0 0 1.5px var(--dorado);
@@ -446,6 +457,7 @@ button:focus-visible {
     background-color: var(--azul-claro);
 }
 
+/* Agenda de cursos y charlas (en escritorio se ve como tabla) */
 .agenda {
     margin-top: 2rem;
     overflow-x: auto;
@@ -476,9 +488,7 @@ button:focus-visible {
 }
 
 
-/* FORMULARIO DE INSCRIPCIONES */
-
-
+/* ===== 6. FORMULARIO DE INSCRIPCIÓN ===== */
 
 .contenedor-formulario {
     max-width: 420px;
@@ -527,6 +537,7 @@ button:focus-visible {
     box-shadow: 0 0 0 3px rgba(44, 95, 132, 0.25);
 }
 
+/* Estados de error: contacto.js agrega y quita la clase campo-invalido */
 .campo .campo-invalido {
     border-color: var(--rojo);
 }
@@ -560,6 +571,7 @@ button:focus-visible {
     background-color: var(--azul-claro);
 }
 
+/* Resumen que crea contacto.js con createElement() al enviar */
 .confirmacion {
     margin-top: 1.5rem;
     padding: 1rem 1.2rem;
@@ -579,6 +591,7 @@ button:focus-visible {
     font-size: 0.9rem;
 }
 
+/* ===== 7. RESPONSIVE: MENÚ HAMBURGUESA Y TABLA (pantallas de hasta 600px) ===== */
 .menu-boton {
     display: none;
 }
@@ -602,6 +615,7 @@ button:focus-visible {
         cursor: pointer;
     }
 
+    /* En mobile el menú se oculta y se muestra solo cuando menu.js le agrega la clase "abierto" */
     .menu {
         display: none;
         width: 100%;
@@ -626,6 +640,7 @@ button:focus-visible {
         border-radius: var(--radio);
     }
 
+    /* Agenda: la tabla se transforma en tarjetas, una por fila */
     .agenda thead {
         display: none;
     }
@@ -663,6 +678,7 @@ button:focus-visible {
         border-bottom: none;
     }
 
+    /* Cada celda muestra su etiqueta tomada del atributo data-label del HTML */
     .agenda td::before {
         content: attr(data-label);
         font-weight: 600;

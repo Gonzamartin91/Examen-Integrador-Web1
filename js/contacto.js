@@ -1,3 +1,4 @@
+/* Elementos del formulario que se validan y contenedor donde se muestra el resumen */
 const formulario = document.getElementById("form-contacto");
 const nombre = document.getElementById("nombre");
 const correo = document.getElementById("correo");
@@ -6,21 +7,33 @@ const curso = document.getElementById("curso");
 const mensaje = document.getElementById("mensaje");
 const respuesta = document.getElementById("mensaje-respuesta");
 
+
+/* Nombre: solo letras (incluye tildes, ñ y ü) y espacios */
 const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/;
+
+/* Correo: texto sin espacios ni @, una @, el dominio, un punto y al menos 2 letras al final */
 const regexCorreo = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+
+/* Teléfono: un + opcional al inicio y entre 8 y 15 dígitos */
 const regexTelefono = /^\+?[0-9]{8,15}$/;
 
+
+/* Muestra el error debajo del campo y lo marca en rojo. Encuentra el mensaje armando su id: "error-" + id del campo (ej.: error-nombre) */
 function mostrarError(campo, texto) {
   const small = document.getElementById("error-" + campo.id);
   small.textContent = texto;
   campo.classList.add("campo-invalido");
 }
 
+/* Borra el mensaje de error y quita el borde rojo */
 function limpiarError(campo) {
   const small = document.getElementById("error-" + campo.id);
   small.textContent = "";
   campo.classList.remove("campo-invalido");
 }
+
+
+/* Validaciones: cada función devuelve true si el campo es válido o false si muestra un error. Primero revisa que no esté vacío, después la longitud y por último el formato */
 
 function validarNombre() {
   const valor = nombre.value.trim();
@@ -91,22 +104,25 @@ function validarMensaje() {
   return true;
 }
 
+/* Validación en vivo: cada campo se revisa mientras se escribe (input) o al elegir una opción (change) */
 nombre.addEventListener("input", validarNombre);
 correo.addEventListener("input", validarCorreo);
 telefono.addEventListener("input", validarTelefono);
 curso.addEventListener("change", validarCurso);
 mensaje.addEventListener("input", validarMensaje);
 
+/* Al enviar: preventDefault() impide el envío tradicional, que recargaría la página */
 formulario.addEventListener("submit", function (evento) {
   evento.preventDefault();
 
-  /* Llamamos a todas las funciones así se muestran todos los errores juntos */
+  /* Se guardan las 5 validaciones en variables en lugar de unirlas con &&: así se ejecutan todas y se muestran todos los errores a la vez */
   const nombreOk = validarNombre();
   const correoOk = validarCorreo();
   const telefonoOk = validarTelefono();
   const cursoOk = validarCurso();
   const mensajeOk = validarMensaje();
 
+  /* Si todo es válido: se muestra el resumen y se vacía el formulario para un nuevo envío */
   if (nombreOk && correoOk && telefonoOk && cursoOk && mensajeOk) {
     mostrarResumen();
     formulario.reset();
@@ -115,10 +131,14 @@ formulario.addEventListener("submit", function (evento) {
   }
 });
 
+/* Crea el resumen con createElement() y lo agrega a la página. Usa textContent para que lo que escribió el usuario nunca se interprete como HTML */
 function mostrarResumen() {
   const cursoElegido = curso.options[curso.selectedIndex].text;
+
+  /* trim() quita los espacios de los bordes y replace(/\s+/g, " ") deja un solo espacio entre palabras */
   const nombreLimpio = nombre.value.trim().replace(/\s+/g, " ");
 
+  /* Borra el resumen anterior para que no se acumulen al enviar varias veces */
   respuesta.textContent = "";
 
   const caja = document.createElement("div");

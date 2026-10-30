@@ -29,6 +29,7 @@
             ☰
         </button>
 
+        <!-- Menú común a las 3 páginas: aria-current="page" marca la página activa -->
         <nav class="menu" id="menu-principal" aria-label="Menú principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -45,6 +46,7 @@
             <!-- novalidate: desactiva los avisos del navegador porque la validación la hace contacto.js -->
             <form id="form-contacto" novalidate>
 
+                <!-- Cada label se asocia a su campo con for = id; el small debajo muestra el error que escribe contacto.js -->
                 <div class="campo">
                     <label for="nombre">Nombre y apellido</label>
                     <input type="text" id="nombre" name="nombre" maxlength="50" autocomplete="name" required>
@@ -67,6 +69,7 @@
 
                 <div class="campo">
                     <label for="curso">Curso o charla de interés</label>
+                    <!-- optgroup agrupa las opciones en Cursos y Charlas; los títulos de grupo no se pueden elegir -->
                     <select id="curso" name="curso" required>
                         <option value="">Elegí una opción</option>
                         <optgroup label="Cursos">
