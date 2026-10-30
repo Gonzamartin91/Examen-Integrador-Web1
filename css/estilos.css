@@ -407,11 +407,34 @@ button:focus-visible {
     border-radius: 6px;
     padding: 0.8rem 1rem;
     margin-bottom: 0.8rem;
-    cursor: pointer;
+    position: relative;
 }
 
-.tarjeta-mini:hover {
+.tarjeta-mini:hover,
+.etiqueta-mini:focus-within {
     border-color: var(--azul-claro);
+}
+
+/* El enlace toma el estilo del título: no se ve azul ni subrayado */
+.tarjeta-enlace {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* El ::after del enlace cubre toda la tarjeta: se puede hacer click en cualquier parte */
+.tarjeta-enlace::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+/* Al llegar con tab, se resalta la tarjeta entera en lugar de sólo el título */
+.tarjeta-enlace:focus-visible {
+    outline: none;
+}
+
+.tarjeta-mini:focus-within {
+    box-shadow: 0 0 0 2px var(--azul-claro);
 }
 
 .tarjeta-mini .etiqueta {
