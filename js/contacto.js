@@ -33,7 +33,7 @@ function validarNombre() {
         return false;
     }
     if (!regexNombre.test(valor)) {
-        mostrarError(campo, "Sólo se permiten letras y espacios.")
+       mostrarError(nombre, "Sólo se permiten letras y espacios.");
         return false;
     }
     limpiarError(nombre);
