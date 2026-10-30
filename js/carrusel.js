@@ -1,35 +1,35 @@
 /* Datos del carrusel: cada objeto es un curso o charla. Para agregar uno nuevo alcanza con sumar un objeto al array, sin modificar el HTML */
 const cursos = [
-    {
-        imagen: "img/carrusel/fullstack.svg",
-        alt: "Imagen sobre curso de Desarrollo Web Full Stack",
-        titulo: "Desarrollo Web Full Stack",
-        descripcion: "8 semanas · Nivel inicial",
-        etiqueta: "DESTACADO",
-        enlaceVer: "contenido.html#fullstack"
-    },
-    {
-        imagen: "img/carrusel/ia-aplicada.svg",
-        alt: "Imagen sobre Charla: IA Aplicada",
-        titulo: "Charla: IA Aplicada",
-        descripcion: "02/11/2026 · 10:00 hs",
-        enlaceVer: "contenido.html#ia-aplicada"
-    },
-    {
-        imagen: "img/carrusel/python-datos.svg",
-        alt: "Imagen sobre curso de Análisis de datos con Phyton",
-        titulo: "Análisis de datos con Phyton",
-        descripcion: "10 semanas · Nivel intermedio",
-        enlaceVer: "contenido.html#python-datos"
-    },
-    {
-        imagen: "img/carrusel/testing.svg",
-        alt: "Imagen sobre Charla: Testing de Software",
-        titulo: "Charla: Testing de Software",
-        descripcion: "06/11/2026 · 09:00 hs",
-        etiqueta: "ÚLTIMOS CUPOS",
-        enlaceVer: "contenido.html#testing"
-    }
+  {
+    imagen: "img/carrusel/fullstack.svg",
+    alt: "Imagen sobre curso de Desarrollo Web - Full Stack",
+    titulo: "Desarrollo Web - Full Stack",
+    descripcion: "8 semanas · Nivel inicial",
+    etiqueta: "DESTACADO",
+    enlaceVer: "contenido.html#fullstack",
+  },
+  {
+    imagen: "img/carrusel/ia-aplicada.svg",
+    alt: "Imagen sobre charla de IA aplicada",
+    titulo: "Charla: IA aplicada",
+    descripcion: "02/11/2026 · 10:00 hs.",
+    enlaceVer: "contenido.html#ia-aplicada",
+  },
+  {
+    imagen: "img/carrusel/python-datos.svg",
+    alt: "Imagen sobre curso de Análisis de datos con Python",
+    titulo: "Análisis de datos con Python",
+    descripcion: "10 semanas · Nivel intermedio",
+    enlaceVer: "contenido.html#python-datos",
+  },
+  {
+    imagen: "img/carrusel/testing.svg",
+    alt: "Imagen sobre charla de Testing de software",
+    titulo: "Charla: Testing de software",
+    descripcion: "06/11/2026 · 09:00 hs.",
+    etiqueta: "ÚLTIMOS CUPOS",
+    enlaceVer: "contenido.html#testing",
+  },
 ];
 
 /* Posición del curso que se está mostrando (0 = el primero del array) */
@@ -47,11 +47,11 @@ const contenedorIndicadores = document.getElementById("indicadores-carrusel");
 
 /* Crea con createElement() un punto indicador por cada curso del array */
 function crearIndicadores() {
-    for(let i = 0; i < cursos.length; i++) {
-        const punto = document.createElement("span");
-        punto.classList.add("punto");
-        contenedorIndicadores.appendChild(punto);
-    }
+  for (let i = 0; i < cursos.length; i++) {
+    const punto = document.createElement("span");
+    punto.classList.add("punto");
+    contenedorIndicadores.appendChild(punto);
+  }
 }
 
 /* Muestra el curso de la posición indiceActual: actualiza imagen, texto alternativo, título, descripción y enlace del botón VER */
@@ -84,21 +84,21 @@ function mostrarCurso() {
 
 /* Avanza al curso siguiente. Si el índice llega a cursos.length (se pasó del último), vuelve al primero (0): así el carrusel es circular */
 function avanzar() {
-    indiceActual++;
-    if (indiceActual >= cursos.length) {
-        indiceActual = 0;
-    }
-    mostrarCurso();
+  indiceActual++;
+  if (indiceActual >= cursos.length) {
+    indiceActual = 0;
+  }
+  mostrarCurso();
 }
 
 /* Retrocede al curso anterior. Si el índice queda en menos de 0, va al último (cursos.length - 1): así el carrusel es
 circular */
 function retroceder() {
-    indiceActual--;
-    if (indiceActual < 0) {
-        indiceActual = cursos.length - 1;
-    }
-    mostrarCurso();
+  indiceActual--;
+  if (indiceActual < 0) {
+    indiceActual = cursos.length - 1;
+  }
+  mostrarCurso();
 }
 
 /* Cada botón ejecuta su función al hacer clic */
