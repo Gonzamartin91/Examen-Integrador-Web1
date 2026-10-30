@@ -1,3 +1,4 @@
+/* Datos del carrusel: cada objeto es un curso o charla. Para agregar uno nuevo alcanza con sumar un objeto al array, sin modificar el HTML */
 const cursos = [
     {
         imagen: "img/carrusel/fullstack.svg",
@@ -31,8 +32,10 @@ const cursos = [
     }
 ];
 
+/* Posición del curso que se está mostrando (0 = el primero del array) */
 let indiceActual = 0;
 
+/* Elementos del HTML que el carrusel modifica */
 const imagenCarrusel = document.getElementById("imagen-carrusel");
 const tituloCarrusel = document.getElementById("titulo-carrusel");
 const descripcionCarrusel = document.getElementById("descripcion-carrusel");
@@ -42,6 +45,7 @@ const botonSiguiente = document.getElementById("btn-siguiente");
 const enlaceVer = document.getElementById("enlace-ver");
 const contenedorIndicadores = document.getElementById("indicadores-carrusel");
 
+/* Crea con createElement() un punto indicador por cada curso del array */
 function crearIndicadores() {
     for(let i = 0; i < cursos.length; i++) {
         const punto = document.createElement("span");
@@ -50,6 +54,7 @@ function crearIndicadores() {
     }
 }
 
+/* Muestra el curso de la posición indiceActual: actualiza imagen, texto alternativo, título, descripción y enlace del botón VER */
 function mostrarCurso() {
     const curso = cursos[indiceActual];
     imagenCarrusel.src = curso.imagen;
@@ -57,13 +62,16 @@ function mostrarCurso() {
     tituloCarrusel.textContent = curso.titulo;
     descripcionCarrusel.textContent = curso.descripcion;
     enlaceVer.href = curso.enlaceVer;
+    
+    /* La etiqueta (DESTACADO, ÚLTIMOS CUPOS) se muestra solo si el curso la tiene; si no, se oculta con la clase "oculto" */
     if (curso.etiqueta) {
         etiqueta.textContent = curso.etiqueta;
         etiqueta.classList.remove("oculto");
     } else {
         etiqueta.classList.add("oculto");
     }
-
+    
+    /* Marca como activo solo el punto que corresponde al curso visible */
     const puntos = contenedorIndicadores.children;
     for (let i = 0; i < puntos.length; i++) {
         if (i === indiceActual) {
@@ -74,6 +82,7 @@ function mostrarCurso() {
     }
 }
 
+/* Avanza al curso siguiente. Si el índice llega a cursos.length (se pasó del último), vuelve al primero (0): así el carrusel es circular */
 function avanzar() {
     indiceActual++;
     if (indiceActual >= cursos.length) {
@@ -82,6 +91,8 @@ function avanzar() {
     mostrarCurso();
 }
 
+/* Retrocede al curso anterior. Si el índice queda en menos de 0, va al último (cursos.length - 1): así el carrusel es
+circular */
 function retroceder() {
     indiceActual--;
     if (indiceActual < 0) {
@@ -90,8 +101,10 @@ function retroceder() {
     mostrarCurso();
 }
 
+/* Cada botón ejecuta su función al hacer clic */
 botonSiguiente.addEventListener("click", avanzar);
 botonAnterior.addEventListener("click", retroceder);
 
+/* Al cargar la página: se crean los puntos indicadores y se muestra el primer curso */
 crearIndicadores();
 mostrarCurso();
